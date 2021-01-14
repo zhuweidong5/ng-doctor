@@ -1,0 +1,61 @@
+@import (reference)"../base/var.less";
+
+.custom-modal-green {
+  .ant-modal-header {
+    background: @color-green;
+    color: @color-fff;
+  }
+
+  .ant-modal-title {
+    color: @color-fff;
+  }
+
+  .ant-modal-close-x {
+    color: @color-fff;
+  }
+
+  .ant-btn-primary {
+    background-color: @color-green;
+    border-color: @color-green;
+
+    &:hover,
+    &:focus {
+      color: @color-fff;
+      background-color: @color-green;
+      border-color: @color-green;
+    }
+  }
+
+  .ant-btn {
+
+    &:hover,
+    &:focus {
+      border-color: @color-green;
+    }
+  }
+
+  .ant-form-item-required::before {
+    color: @color-green;
+    font-weight: 700;
+  }
+}
+
+.custom-modal-blue {
+  .ant-modal-header {
+    background: @color-blue;
+    color: @color-fff;
+  }
+
+  .ant-modal-title {
+    color: @color-fff;
+  }
+
+  .ant-modal-close-x {
+    color: @color-fff;
+  }
+
+  .ant-form-item-required::before {
+    color: @color-blue;
+    font-weight: 700;
+  }
+}

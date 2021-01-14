@@ -1,0 +1,72 @@
+////////
+// 基本样式，勿导入至全局style.less文件中
+////////
+
+// padding pt-0 pt-10 pt-10 ...
+.pt-generate(@n,@i:0) when (@n>=@i) {
+  .pt-@{i} {
+    padding-top: unit(@i, px);
+  }
+  .pt-generate(@n, (@i+5));
+}
+
+.pb-generate(@n,@i:0) when (@n>=@i) {
+  .pb-@{i} {
+    padding-bottom: unit(@i, px);
+  }
+  .pb-generate(@n, (@i+5));
+}
+
+
+.pl-generate(@n,@i:0) when (@n>=@i) {
+  .pl-@{i} {
+    padding-left: unit(@i, px);
+  }
+  .pl-generate(@n, (@i+5));
+}
+
+.pr-generate(@n,@i:0) when (@n>=@i) {
+  .pr-@{i} {
+    padding-right: unit(@i, px);
+  }
+  .pr-generate(@n, (@i+5));
+}
+
+// margin mt-10 mt-15 mt-20 ... mt-100
+.mt-generate(@n,@i:0) when (@n>=@i) {
+  .mt-@{i} {
+    margin-top: unit(@i, px);
+  }
+  .mt-generate(@n, (@i+5));
+}
+
+.mb-generate(@n,@i:0) when (@n>=@i) {
+  .mb-@{i} {
+    margin-bottom: unit(@i, px);
+  }
+  .mb-generate(@n, (@i+5));
+}
+
+.ml-generate(@n,@i:0) when (@n>=@i) {
+  .ml-@{i} {
+    margin-left: unit(@i, px);
+  }
+  .ml-generate(@n, (@i+5));
+}
+
+.mr-generate(@n,@i:0) when (@n>=@i) {
+  .mr-@{i} {
+    margin-right: unit(@i, px);
+  }
+  .mr-generate(@n, (@i+5));
+}
+
+// font-size fs-14 fs-16 ... fs-60
+.fs-generate(@n, @i:12) when (@n >=@i) {
+  .fs-@{i} {
+    font-size: unit(@i, px);
+  }
+  .fs-generate(@n, (@i + 2));
+}
+
+
