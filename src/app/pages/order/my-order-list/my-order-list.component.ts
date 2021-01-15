@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PathLibrary } from 'src/core/libs/path-library';
+import { RouterService } from "src/core/service/router.service";
+
 
 @Component({
   selector: 'app-my-order-list',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyOrderListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private routerService: RouterService
+  ) { }
 
   ngOnInit(): void {
   }

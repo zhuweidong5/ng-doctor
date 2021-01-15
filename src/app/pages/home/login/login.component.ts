@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   // 跳转首页
   goIndex() {
-    this.routerService.navigate([PathLibrary.moduleNameOrder, PathLibrary.myOrderList], {}); // 登录成功指定跳转
+    this.routerService.navigate([PathLibrary.moduleNameOrder, PathLibrary.homepage], {}); // 登录成功指定跳转
   }
 
 }

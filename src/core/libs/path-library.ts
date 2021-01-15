@@ -14,4 +14,9 @@ export class PathLibrary {
     public static readonly moduleNameOrder = 'order-management';    // 模块名
     public static readonly myOrderList = 'my-order-list';   
     public static readonly orderDetail = 'order-detail';
+    public static readonly homepage = 'index';
+
+    // order-management/homepage
+
+
 }

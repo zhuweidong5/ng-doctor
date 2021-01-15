@@ -1,15 +1,28 @@
 <div class="app-frame">
-    <!-- 头部-->
+    <!-- 头部 -->
     <div class="header">
         头部
     </div>
 
-    <!-- 左侧菜单 通过接口获取 开发时请打开 并 屏蔽下面对应节点-->
-    <div class="left-menu">
-        左侧菜单
+    <!-- 左侧菜单 -->
+    <div class="left-menu" style="width: 240px;">
+      <ul nz-menu nzMode="inline" [nzInlineCollapsed]="false">
+        <!-- (click)="goToIndex(index,menu)" -->
+        <li [ngStyle]="{'color': openMap[index] ? '#0081CC': ''}" nz-submenu [nzTitle]="menu.name" 
+            *ngFor="let menu of menuList; let index=index" [nzIcon]="menu.icon" [(nzOpen)]="openMap[index]"
+            (nzOpenChange)="openHandler(index+'')">
+            <ng-container>
+                <ul *ngFor="let item of menu.children">
+                    <li nz-menu-item [nzSelected]="item.selected" (click)="goTo(item)" [title]="item.name">
+                        {{item.name}}
+                    </li>
+                </ul>
+            </ng-container>
+        </li>
+      </ul>
     </div>
 
-    <!-- 内容区-->
+    <!-- 内容区 -->
     <div class="content mb-45">
         <!--子路由占位符-->
         <router-outlet></router-outlet>

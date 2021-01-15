@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 /** 组件引入 */
 import { LoginComponent } from './login/login.component';
@@ -15,7 +16,8 @@ import { FrameComponent } from './frame/frame.component';
   declarations: [LoginComponent, PageNotFoundComponent, IndexComponent, LogoutComponent, FrameComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    NzMenuModule
   ]
 })
 export class HomeModule { }

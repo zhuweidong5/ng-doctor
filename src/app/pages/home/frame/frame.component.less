@@ -1,34 +1,122 @@
 @zIndex: 2;
 
 .app-frame {
-    .header {
-        position: fixed;
-        width: 100%;
-        height: 64px;
-        top: 0;
-        left: 0;
-        line-height: 64px;
-        z-index: @zIndex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  // 页头
+  .header {
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    top: 0;
+    left: 0;
+    line-height: 64px;
+    z-index: @zIndex;
+
+    .header-wrap {
+      display: flex;
+      color: #fff;
+      justify-content: space-between;
+
+      .flex {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .setting-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .tips-box {
+        position: relative;
+
+        img{
+          margin-right: 10px;
+        }
+        .logout{
+          margin-left: 30px;
+        }
+      }
+
     }
 
-    .left-menu {
-        position: fixed;
-        top: 64px;
-        left: 0;
-        bottom: 0;
-        width: 15%;
-        height: auto;
-        overflow-y: overlay;
-        background-color: rgba(221,221,221);
-        transition: all .3s;
+    .logo {
+      height: 40px;
+      border-radius: 40px;
+    }
+  }
+
+  // 左侧菜单
+  .left-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    width: 15%;
+    height: auto;
+    overflow-y: overlay;
+    background-color: rgba(221, 221, 221);
+    transition: all .3s;
+
+    .item {
+      height: 45px;
+      line-height: 45px;
+
+      &:hover {
+        background: rgba(177, 177, 177);
+        color: rgba(51, 51, 51);
+        cursor: pointer;
+      }
     }
 
-    .content {
-        width: 85%;
-        height: auto;
-        margin-left: 15%;
-        padding: 80px 20px 20px;
-        background-color: #fff;
-        transition: all .3s;
+    .selected {
+      color: #4785b8;
+      background: rgba(177, 177, 177);
     }
+  }
+
+  // 内容区域
+  .content {
+    width: 85%;
+    height: auto;
+    margin-left: 15%;
+    padding: 80px 20px 20px;
+    background-color: #fff;
+    transition: all .3s;
+
+    .content-title {
+      padding: 10px 0 10px 10px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+  }
+
+  // 页脚
+  .footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: @zIndex;
+    height: 45px;
+  }
+
+  .setting {
+    position: absolute;
+    top: 30%;
+    right: 1rem;
+    background: red;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 0.2rem;
+  }
 }
