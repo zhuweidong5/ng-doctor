@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+# gulp 配置
+#  1. 安装: npm install --save-dev gulp 
+#  2. 安装: npm install require-dir --save-dev
+#  3. 安装: npm install --save directory-exists
+#  4. 安装: npm install git-rev-sync --save
+#  5. 安装: npm install gulp-print
+#  6. 安装: npm install --save-dev gulp-zip
+#  7. 安装: npm install gulp-string-replace --save-dev
