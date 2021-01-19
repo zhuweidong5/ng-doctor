@@ -6,10 +6,11 @@ import { PathLibrary } from 'src/core/libs/path-library';
 import { MyOrderListComponent } from './my-order-list/my-order-list.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { remoteConsultinfRoomDeactivateGuard } from 'src/core/guard/Room-deactivate.guard'; // 路由监听
 
 
 const routes: Routes = [
-  { path: PathLibrary.orderDetail, component: OrderDetailComponent},
+  { path: PathLibrary.orderDetail, component: OrderDetailComponent, canDeactivate: [remoteConsultinfRoomDeactivateGuard]},
   { path: PathLibrary.myOrderList, component: MyOrderListComponent},
   { path: PathLibrary.homepage, component: HomePageComponent},
 
