@@ -1,6 +1,8 @@
+import { DatePipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PathLibrary } from 'src/core/libs/path-library';
+import { LoginComponent } from './pages/home/login/login.component';
 
 const routes: Routes = [
   {path: '', redirectTo: PathLibrary.login, pathMatch: 'full'},
@@ -11,10 +13,21 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
 
+  {path: '**', component: LoginComponent}
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(
+    routes,
+    {
+      enableTracing: false, // 路由跟踪
+      useHash: false
+    }
+  )],
+  exports: [RouterModule],
+  providers: [
+    DatePipe
+  ],
 })
 export class AppRoutingModule { }

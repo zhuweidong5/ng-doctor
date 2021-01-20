@@ -9,7 +9,7 @@ import { OrderDetailComponent } from 'src/app/pages/order/order-detail/order-det
 @Injectable({
   providedIn: 'root'
 })
-export class remoteConsultinfRoomDeactivateGuard implements CanDeactivate<OrderDetailComponent> {
+export class RemoteConsultinfRoomDeactivateGuard implements CanDeactivate<OrderDetailComponent> {
 
   canDeactivate(
      component: OrderDetailComponent,
