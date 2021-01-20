@@ -106,8 +106,14 @@ export class FrameComponent implements OnInit {
           PathLibrary.moduleNameOrder,
           PathLibrary.homepage,
         ]); 
-      } else {
-        // alert("请配置路由地址！");
+      } else if (menu.path === "map") {
+        this.routerService.navigate([
+          PathLibrary.moduleNameMap,
+          PathLibrary.map,
+        ]);  
+      }
+      else {
+        alert("请配置路由地址！");
       }
     } else {
       console.log("正式环境菜单", menu);

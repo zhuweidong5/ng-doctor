@@ -23,6 +23,11 @@ const routes: Routes = [
 				loadChildren: () =>
 				import('../order/order.module').then(m => m.OrderModule)
 			},
+			{
+				path: PathLibrary.moduleNameMap,
+				loadChildren: () =>
+				import('../plan/plan.module').then(m => m.PlanModule)
+			},
 
 			/* 通配符组件，放置在后面 */
 			{ path: '**', component: PageNotFoundComponent }

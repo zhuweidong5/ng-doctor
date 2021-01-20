@@ -16,7 +16,10 @@ export class PathLibrary {
     public static readonly orderDetail = 'order-detail';
     public static readonly homepage = 'index';
 
-    // order-management/homepage
+    // plan模块
+    public static readonly moduleNameMap = 'map-management';    // 模块名
+    public static readonly map = 'map';
+
 
 
 }

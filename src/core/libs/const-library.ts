@@ -58,7 +58,7 @@ export class ConstLibrary {
     },
     
     {
-      path: "/drugInfoManagement",
+      path: "plan-management",
       name: "药品信息",
       meta: {
         title: "药品信息",
@@ -66,7 +66,7 @@ export class ConstLibrary {
       },
       children: [
         {
-          path: "/drugInfo",
+          path: "map",
           name: "药品信息管理",
           id: "ypxxgl",
           meta: {
