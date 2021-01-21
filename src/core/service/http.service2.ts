@@ -85,7 +85,7 @@ export class HttpService {
     return new Observable((subscriber) => {
       this.httpClient.request(method, url, options).subscribe(
         (response) => {
-            if (response.code === 'SUCCESS') {
+            if (response.code === 'success' || response.msg === 'success') {
                 subscriber.next(response.data);
                 subscriber.complete();
             } else  {

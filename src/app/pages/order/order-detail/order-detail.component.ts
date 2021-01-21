@@ -50,12 +50,10 @@ export class OrderDetailComponent implements OnInit {
 
   // 路由监听
   CanDeactivate(): Observable<boolean> {
-    debugger
     const hasRoomParam = true; 
     return new Observable(
       observer => {
         if ( hasRoomParam) {
-          debugger
           this.modalService.alert('', '你有正在进行的会诊,确定要离开吗？', [
             { text: '取消', onPress: () => {
               observer.next(false);

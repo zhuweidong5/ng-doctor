@@ -41,4 +41,13 @@ export class RequestService {
     //         body: ''
     //     });
     // }
+
+   
+    
+    /**
+     * 测试接口
+     */
+    demoApi(): Observable<any> {
+        return this.httpService.request('get', this.host + ApiLibrary.demoApi);
+    }
 }

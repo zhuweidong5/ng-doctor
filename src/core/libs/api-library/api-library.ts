@@ -8,4 +8,8 @@ export class ApiLibrary {
 
     public static readonly login = 'auth/login';      // 登录
 
+
+    public static readonly demoApi = 'list/product';      // 测试接口
+
+
 }
