@@ -19,6 +19,8 @@ export class PathLibrary {
     // plan模块
     public static readonly moduleNameMap = 'map-management';    // 模块名
     public static readonly map = 'map';
+    public static readonly eyu = 'eyu';
+    public static readonly kyle = 'kyle';
 
 
 

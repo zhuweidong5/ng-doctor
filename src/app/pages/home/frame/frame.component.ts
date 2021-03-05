@@ -111,6 +111,16 @@ export class FrameComponent implements OnInit {
           PathLibrary.moduleNameMap,
           PathLibrary.map,
         ]);  
+      } else if (menu.path === "eyu") {
+        this.routerService.navigate([
+          PathLibrary.moduleNameOrder,
+          PathLibrary.eyu,
+        ]);  
+      } else if (menu.path === "kyle") {
+        this.routerService.navigate([
+          PathLibrary.moduleNameOrder,
+          PathLibrary.kyle,
+        ]);  
       }
       else {
         alert("请配置路由地址！");

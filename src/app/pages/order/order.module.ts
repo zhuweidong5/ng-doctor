@@ -12,11 +12,13 @@ import { MyOrderListComponent } from './my-order-list/my-order-list.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
-import { VideoIndexService } from '../../../core/service/video/index.service'; // 视频
+import { VideoIndexService } from '../../../core/service/video/index.service';
+import { CrocodileComponent } from './crocodile/crocodile.component';
+import { KyleComponent } from './kyle/kyle.component'; // 视频
 // import { WebImService } from '../../../core/service/tencent-im/web-im.service'; // 聊天
 
 @NgModule({
-  declarations: [MyOrderListComponent, OrderDetailComponent, HomePageComponent],
+  declarations: [MyOrderListComponent, OrderDetailComponent, HomePageComponent, CrocodileComponent, KyleComponent],
   imports: [
     CommonModule,
     OrderRoutingModule,

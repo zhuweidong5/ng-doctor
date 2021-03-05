@@ -48,9 +48,9 @@ export class ConstLibrary {
         {
           path: "order-detail",
           id: "10",
-          name: "订单详情",
+          name: "多人会诊",
           meta: {
-            title: "挂号订单",
+            title: "多人会诊",
             icon: ""
           }
         },
@@ -59,18 +59,50 @@ export class ConstLibrary {
     
     {
       path: "plan-management",
-      name: "药品信息",
+      name: "地图信息",
       meta: {
-        title: "药品信息",
+        title: "地图信息",
         icon: null
       },
       children: [
         {
           path: "map",
-          name: "药品信息管理",
+          name: "地图",
           id: "ypxxgl",
           meta: {
-            title: "药品信息管理",
+            title: "地图",
+            icon: ""
+          },
+          redirect: "",
+          children: []
+        },
+      ]
+    },
+    {
+      path: "system-management",
+      name: "系统配置",
+      meta: {
+        title: "系统配置",
+        icon: null
+      },
+      children: [
+        {
+          path: "eyu",
+          name: "天使的鳄鱼",
+          id: "eyu",
+          meta: {
+            title: "天使的鳄鱼",
+            icon: ""
+          },
+          redirect: "",
+          children: []
+        },
+        {
+          path: "kyle",
+          name: "凯尔",
+          id: "kyle",
+          meta: {
+            title: "凯尔",
             icon: ""
           },
           redirect: "",
