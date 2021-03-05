@@ -10,6 +10,9 @@ export class ApiLibrary {
 
 
     public static readonly demoApi = 'list/product';      // 测试接口
+    public static readonly qryList = 'list';      // 普通的list
+    public static readonly qryPage = 'page';      // 分页的list  /page/:status/:page
+    public static readonly qryDetail = 'detail';      // 分页的详情  
 
 
 }

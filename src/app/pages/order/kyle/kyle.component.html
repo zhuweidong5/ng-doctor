@@ -1,1 +1,25 @@
-<p>kyle works!</p>
+<div>
+    <div class="nav-title">凯尔</div>
+    <nz-table #basicTable [nzData]="listOfData">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of basicTable.data; let index =index">
+                <td>{{ index+1 }}</td>
+                <td>{{ data.firstName }}</td>
+                <td>{{ data.email }}</td>
+                <td>{{ data.lastName }}</td>
+                <td>
+                    <a (click)="detail(data)">详情</a>
+                </td>
+              </tr>
+        </tbody>
+      </nz-table>
+</div>

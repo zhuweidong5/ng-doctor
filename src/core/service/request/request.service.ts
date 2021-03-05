@@ -7,47 +7,68 @@ import { HttpService } from '../http.service2';
     providedIn: 'root'
 })
 export class RequestService {
-    private host!: string;
-    constructor(
-      private httpService: HttpService,
-    ) {
-    }
+  private host!: string;
+  constructor(
+    private httpService: HttpService,
+  ) {
+  }
 
-    // 设置域名
-    setURL(url: string) {
-      this.host = url;
-    }
+  // 设置域名
+  setURL(url: string) {
+    this.host = url;
+  }
 
-    // 获取域名
-    getHost(): string {
-      return this.host;
-    }
+  // 获取域名
+  getHost(): string {
+    return this.host;
+  }
 
-    /**
-     * 读取本地配置数据（建议后续优先使用该方法）
-     * @param url url地址
-     * @param option 配置项
-     */
-    readLocalJSON(url: string, option?: any): Observable<any> {
-        return this.httpService.getLocalData(url, option);
-    }
+  /**
+   * 读取本地配置数据（建议后续优先使用该方法）
+   * @param url url地址
+   * @param option 配置项
+   */
+  readLocalJSON(url: string, option?: any): Observable<any> {
+      return this.httpService.getLocalData(url, option);
+  }
 
-    /*********************************** 获取数据 ************************************/
-    /**
-     * 获取地图数据
-     */
-    // getMapDataList(): Observable<any> {
-    //     return this.httpService.request('get', this.host + ApiLibrary.aaa, {
-    //         body: ''
-    //     });
-    // }
+  /*********************************** 获取数据 ************************************/
+  /**
+   * 获取地图数据
+   */
+  // getMapDataList(): Observable<any> {
+  //     return this.httpService.request('get', this.host + ApiLibrary.aaa, {
+  //         body: ''
+  //     });
+  // }
 
-   
-    
-    /**
-     * 测试接口
-     */
-    demoApi(): Observable<any> {
-        return this.httpService.request('get', this.host + ApiLibrary.demoApi);
-    }
+  
+  
+  /**
+   * 测试接口
+   */
+  demoApi(): Observable<any> {
+      return this.httpService.request('get', this.host + ApiLibrary.demoApi);
+  }
+
+  /**
+   * 测试接口
+   */
+  qryList(): Observable<any> {
+    return this.httpService.request('post', this.host + ApiLibrary.qryList);
+  }
+
+  /**
+   * 测试接口
+   */
+  qryPage(): Observable<any> {
+    return this.httpService.request('post', this.host + ApiLibrary.qryPage);
+  }
+
+  /**
+   * 测试接口
+   */
+  qryDetail(id: string): Observable<any> {
+    return this.httpService.request('get', this.host + ApiLibrary.qryDetail + '/' + id);
+  }
 }

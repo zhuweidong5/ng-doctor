@@ -3,9 +3,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzTableModule } from 'ng-zorro-antd/table';
 import { OrderRoutingModule } from './order-routing.module';
 import { NgZorroAntdMobileModule } from 'ng-zorro-antd-mobile';
 import  * as TRTC from 'trtc-js-sdk'; // 按模块引入trtc sdk
+
+import { AntDesignModule } from '../../../core/ui/ant-design/ant-design.module';
 
 // 引入组件
 import { MyOrderListComponent } from './my-order-list/my-order-list.component';
@@ -22,9 +25,11 @@ import { KyleComponent } from './kyle/kyle.component'; // 视频
   imports: [
     CommonModule,
     OrderRoutingModule,
+    AntDesignModule,
 
     NzButtonModule,
     NzGridModule,
+    NzTableModule,
     NgZorroAntdMobileModule
     
   ]

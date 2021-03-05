@@ -85,7 +85,8 @@ export class HttpService {
     return new Observable((subscriber) => {
       this.httpClient.request(method, url, options).subscribe(
         (response) => {
-            if (response.code === 'success' || response.msg === 'success') {
+            if (response.code === 'success' || response.msg === 'success' || response.message === 'success') {
+                console.log('请求了接口吗', response.data)
                 subscriber.next(response.data);
                 subscriber.complete();
             } else  {
