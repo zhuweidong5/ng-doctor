@@ -5,7 +5,9 @@ import { PathLibrary } from 'src/core/libs/path-library';
 import { LoginComponent } from './pages/home/login/login.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: PathLibrary.login, pathMatch: 'full'},
+
+  // 第一个路由就是运行项目默认跳转的页面
+  {path: '', redirectTo: PathLibrary.login, pathMatch: 'full'},  
 
   // 主模块(home)
   {

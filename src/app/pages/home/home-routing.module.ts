@@ -10,7 +10,8 @@ import { FrameComponent } from './frame/frame.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-	{ path: PathLibrary.login, component: LoginComponent },
+  	// 第一个路由就是运行项目默认跳转的页面,若app-router里没有默认第一个,此处就是第一个
+	{ path: PathLibrary.login, component: LoginComponent }, 
 	{ path: PathLibrary.logout, component: LogoutComponent },
 	{
 		path: PathLibrary.frame,
